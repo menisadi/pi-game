@@ -1,5 +1,5 @@
 
-<h1 align="center">Pi Game</h1>
+<h1 align="center">Learn π by ♥</h1>
 <div align="center" id="logo">
     <img src="./assets/pi.jpeg" width="200", height="200">
 </div>
