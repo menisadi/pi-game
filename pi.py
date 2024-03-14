@@ -35,11 +35,17 @@ def learn_digits(num_digits, delay=None):
     else:
         print(" ".join(pi_digits))
 
+    print()
+
 
 def score(corrections):
-    hits_list = [int(c == " ") for c in corrections]
-    base = 2
-    return sum(h * base**i for i, h in enumerate(hits_list))
+    # TODO: find a better scoring system :)
+    hits_list = [int(c == " ") for c in corrections[2:]]
+    base = 1
+    multi = 1
+    return sum(
+        i**multi * h * base**i for i, h in enumerate(hits_list, start=2)
+    ) + int(corrections[0] == " ")
 
 
 def check(num):
@@ -60,7 +66,7 @@ def check(num):
     print(correction)
 
     correct_count = sum([1 for d in correction if d == " "])
-    print(f"\nYou got {correct_count} digits out of {len(num)} right!")
+    print(f"\nYou got {correct_count - 1} out of {len(num) - 1} right!")
     print(f"Score: {score(correction)}")
 
 
@@ -73,10 +79,61 @@ def test():
     check(user_input)
 
 
-def main():
+def learn():
+    os.system("cls" if os.name == "nt" else "clear")
     print(pyfiglet.figlet_format(TITLE_TEXT, font="small"))
-    # learn_digits(3, delay=100)
-    test()
+    num_digits = int(input("Enter the number of digits you want to learn: "))
+    input_delay = input(
+        "Choose the amount of delay between digits' appearance or press Enter to set it to 0:\n"
+    )
+    if input_delay == "":
+        delay = 0
+    else:
+        delay = int(input_delay)
+
+    learn_digits(num_digits, delay)
+
+
+def help_info():
+    print(
+        """
+Welcome to The Pi Game!
+
+In this game, you can choose to learn or test your knowledge of the digits of Pi.
+To choose a mode, enter the corresponding number:
+
+1. Learn: View a specified number of digits of Pi.
+2. Test: Test your knowledge by testing the digits of Pi you remember.
+
+You can exit the game at any time by choosing the 'Exit' option.
+    """
+    )
+
+
+def main():
+    while True:
+        os.system("cls" if os.name == "nt" else "clear")
+        print(pyfiglet.figlet_format(TITLE_TEXT, font="small"))
+        print("Choose mode:")
+        print("1. Learn")
+        print("2. Test")
+        print("3. Help")
+        print("4. Exit")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            learn()
+        elif choice == "2":
+            test()
+        elif choice == "3":
+            help_info()
+            input("Press Enter to continue...")
+        elif choice == "4" or choice.lower() == "exit":
+            break
+        else:
+            print("Invalid choice. Please enter a valid option.")
+
+        input("Press Enter to continue...")
 
 
 if __name__ == "__main__":
