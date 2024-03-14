@@ -1,6 +1,10 @@
 import os
 import time
+import pyfiglet
 import mpmath
+
+
+TITLE_TEXT = "The Pi Game!"
 
 
 def _calculate_pi(num_digits):
@@ -55,19 +59,22 @@ def check(num):
     print(checked_digits)
     print(correction)
 
-    correct_count = sum([1 for d in correction if d != " "])
-    print(f"\nYou got {correct_count} digits {len(num)} right!")
+    correct_count = sum([1 for d in correction if d == " "])
+    print(f"\nYou got {correct_count} digits out of {len(num)} right!")
     print(f"Score: {score(correction)}")
 
 
 def test():
     os.system("cls" if os.name == "nt" else "clear")
+    print(pyfiglet.figlet_format(TITLE_TEXT, font="small"))
     user_input = input("Enter the digits you know:\n")
     os.system("cls" if os.name == "nt" else "clear")
+    print(pyfiglet.figlet_format(TITLE_TEXT, font="small"))
     check(user_input)
 
 
 def main():
+    print(pyfiglet.figlet_format(TITLE_TEXT, font="small"))
     # learn_digits(3, delay=100)
     test()
 
