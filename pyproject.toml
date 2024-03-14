@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pi-by-heart"
-version = "1.0.0"
+version = "1.0.1"
 description = "A simple pi memorization game"  
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -18,4 +18,4 @@ mpmath = "^1.0"
 pyfiglet = "^1.3.0"  
 
 [project.scripts]
-game = "pi:main"
+pi-by-heart = "pi:main"

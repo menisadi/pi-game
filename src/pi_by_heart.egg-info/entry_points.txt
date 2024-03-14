@@ -1,2 +1,2 @@
 [console_scripts]
-game = pi:main
+pi-by-heart = pi:main

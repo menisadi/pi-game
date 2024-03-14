@@ -16,6 +16,13 @@
 A little memory game for Pi-Day
 
 ## Usage
+### Using pip
+Install it using pip:
+```bash
+pip install pi-by-heart
+```
+
+### From source
 You may need to install the following:
 ```bash
 pip install pyfiglet mpmath
