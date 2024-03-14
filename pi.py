@@ -32,6 +32,12 @@ def learn_digits(num_digits, delay=None):
         print(" ".join(pi_digits))
 
 
+def score(corrections):
+    hits_list = [int(c == " ") for c in corrections]
+    base = 2
+    return sum(h * base**i for i, h in enumerate(hits_list))
+
+
 def check(num):
     length_after_point = len(num) - 2
     true_pi = _calculate_pi(length_after_point)
@@ -49,14 +55,21 @@ def check(num):
     print(checked_digits)
     print(correction)
 
+    correct_count = sum([1 for d in correction if d != " "])
+    print(f"\nYou got {correct_count} digits {len(num)} right!")
+    print(f"Score: {score(correction)}")
 
-def main():
-    os.system("clear")
+
+def test():
+    os.system("cls" if os.name == "nt" else "clear")
     user_input = input("Enter the digits you know:\n")
-    os.system("clear")
+    os.system("cls" if os.name == "nt" else "clear")
     check(user_input)
 
+
+def main():
     # learn_digits(3, delay=100)
+    test()
 
 
 if __name__ == "__main__":
