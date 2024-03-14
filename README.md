@@ -21,6 +21,11 @@ Install it using pip:
 ```bash
 pip install pi-by-heart
 ```
+Then run
+```bash
+pi-by-heart
+```
+and follow the instructions.
 
 ### From source
 You may need to install the following:
