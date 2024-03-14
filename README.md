@@ -11,9 +11,6 @@
     <a href="https://www.gnu.org/licenses/gpl-3.0">
         <img alt="License: GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg">
     </a>
-    <a href="https://github.com/menisadi/pi-game/releases">
-        <img alt="GitHub Release" src="https://img.shields.io/github/v/release/menisadi/pi-game">
-    </a>
 </p>
 
 A little memory game for Pi-Day
