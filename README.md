@@ -39,7 +39,7 @@ pip install pyfiglet mpmath
 ```
 After installing simply run
 ```bash
-python pi.py
+python ./src/pi.py
 ```
 and follow the instructions.
 
