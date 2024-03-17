@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pi-by-heart
-Version: 1.0.1
+Version: 1.0.2
 Summary: A simple pi memorization game
 Author-email: Meni Sadigurschi <menisadi@gmail.com>
 License:                     GNU GENERAL PUBLIC LICENSE
@@ -682,21 +682,7 @@ Keywords: game,python,pi,mpmath,pyfiglet
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
-
-<h1 align="center">Learn π by ♥</h1>
-<div align="center" id="logo">
-    <img src="./assets/pi.jpeg" width="200", height="200">
-</div>
-
-<p align="center">
-    <a href="https://github.com/menisadi/pi-game/pulse">
-      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/menisadi/pi-game">
-    </a>
-    <a href="https://www.gnu.org/licenses/gpl-3.0">
-        <img alt="License: GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg">
-    </a>
-</p>
-
+# Learn π by ♥
 A little memory game for Pi-Day
 
 ## Usage
@@ -705,6 +691,11 @@ Install it using pip:
 ```bash
 pip install pi-by-heart
 ```
+Then run
+```bash
+pi-by-heart
+```
+and follow the instructions.
 
 ### From source
 You may need to install the following:

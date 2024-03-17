@@ -1,5 +1,6 @@
 LICENSE
 README.md
+pypireadme.md
 pyproject.toml
 src/pi.py
 src/pi_by_heart.egg-info/PKG-INFO
