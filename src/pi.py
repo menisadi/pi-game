@@ -8,9 +8,7 @@ TITLE_TEXT = "The Pi Game!"
 
 
 def _calculate_pi(num_digits):
-    mpmath.mp.dps = (
-        num_digits + 2
-    )  # Set the precision to required number of digits
+    mpmath.mp.dps = num_digits + 2  # Set the precision to required number of digits
 
     # Return pi as a string with desired precision
     return str(mpmath.pi)[:-1]
@@ -121,14 +119,13 @@ def main():
         print("4. Exit")
         choice = input("Enter your choice: ")
 
-        if choice == "1":
+        if choice == "1" or choice.lower() == "learn":
             learn()
-        elif choice == "2":
+        elif choice == "2" or choice.lower() == "test":
             test()
-        elif choice == "3":
+        elif choice == "3" or choice.lower() == "help":
             help_info()
-            input("Press Enter to continue...")
-        elif choice == "4" or choice.lower() == "exit":
+        elif choice == "4" or choice.lower() == "exit" or choice == "q":
             break
         else:
             print("Invalid choice. Please enter a valid option.")

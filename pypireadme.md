@@ -14,6 +14,11 @@ pi-by-heart
 and follow the instructions.
 
 ### From source
+Fork the repository:
+```bash
+git clone https://github.com/menisadi/pi-game.git
+cd pi-game
+```
 You may need to install the following:
 ```bash
 pip install pyfiglet mpmath
