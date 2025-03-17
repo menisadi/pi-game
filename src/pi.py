@@ -59,7 +59,7 @@ def check(num):
             checked_digits += "\033[91m" + input_d + "\033[0m"
             correction += true_d
 
-    print("Endte the digits you know:")
+    print("Enter the digits you know:")
     print(checked_digits)
     print(correction)
 

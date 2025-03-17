@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.2
 Name: pi-by-heart
-Version: 1.0.3
+Version: 1.0.5
 Summary: A simple pi memorization game
 Author-email: Meni Sadigurschi <menisadi@gmail.com>
 License:                     GNU GENERAL PUBLIC LICENSE
@@ -682,6 +682,8 @@ Project-URL: Homepage, https://github.com/menisadi/pi-game
 Keywords: game,python,pi,mpmath,pyfiglet
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Requires-Dist: mpmath>=1.0
+Requires-Dist: pyfiglet>=1.0
 
 # Learn π by ♥
 A little memory game for Pi-Day
@@ -710,7 +712,7 @@ pip install pyfiglet mpmath
 ```
 After installing simply run
 ```bash
-python pi.py
+python ./src/pi.py
 ```
 and follow the instructions.
 
